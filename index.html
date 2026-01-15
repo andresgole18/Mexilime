@@ -70,6 +70,7 @@
       font-weight:700;
       color:#fff;
       opacity:.98;
+      line-height:1;
     }
     .toplink i{opacity:.95}
     .toplink:hover{opacity:1; text-decoration:underline}
@@ -91,7 +92,7 @@
       .topbar-left{gap:12px}
     }
 
-    /* ========= HEADER (compact, no extra gap) ========= */
+    /* ========= HEADER ========= */
     header{
       position:sticky;
       top:0;
@@ -99,10 +100,10 @@
       background: rgba(8,36,19,.85);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid rgba(255,255,255,.08);
-      padding:8px 0;                 /* ✅ KEY: compact header */
+      padding:8px 0;
     }
 
-    /* ✅ Prevent hidden margins inside header inflating height */
+    /* Prevent hidden margins inside header inflating height */
     header *{
       margin-top:0;
       margin-bottom:0;
@@ -113,7 +114,7 @@
       align-items:center;
       justify-content:space-between;
       gap:14px;
-      padding:6px 0; /* compact */
+      padding:6px 0;
     }
 
     .brand{
@@ -127,8 +128,12 @@
     }
 
     nav ul{
-      list-style:none; padding:0;
-      display:flex; gap:18px; align-items:center;
+      list-style:none;
+      margin:0;              /* ✅ important */
+      padding:0;
+      display:flex;
+      gap:18px;
+      align-items:center;
     }
     nav a{
       color:rgba(255,255,255,.92);
@@ -140,7 +145,7 @@
       text-transform:uppercase;
       display:inline-flex;
       align-items:center;
-      line-height:1; /* helps keep it compact */
+      line-height:1;
     }
     nav a:hover{background: rgba(255,255,255,.10)}
 
@@ -174,13 +179,14 @@
     }
     .btn-ghost:hover{background: rgba(255,255,255,.10)}
 
-    /* Language toggle (compact, like reference) */
+    /* Language toggle */
     .lang-toggle{
       display:inline-flex;
       border:1px solid rgba(255,255,255,.18);
       border-radius:14px;
       overflow:hidden;
       background: rgba(0,0,0,.18);
+      line-height:1;
     }
     .lang-toggle button{
       appearance:none; border:0;
@@ -330,7 +336,7 @@
       font-weight:650;
     }
 
-    /* ========= PRODUCT (same content, new visual language) ========= */
+    /* ========= PRODUCT ========= */
     .product-wrap{
       display:grid;
       grid-template-columns: 1.05fr .95fr;
@@ -401,7 +407,7 @@
       flex:0 0 auto;
     }
 
-    /* ========= CONTACT (background image + simple form) ========= */
+    /* ========= CONTACT ========= */
     .contact-banner{
       position:relative;
       padding: 76px 0;
@@ -502,6 +508,38 @@
       gap:14px; flex-wrap:wrap;
     }
     .footer-grid small{color:var(--muted); font-weight:650}
+
+    /* ======================================================
+       🔥 FINAL OVERRIDE: FORCE COMPACT HEADER (wins always)
+       ====================================================== */
+    header{
+      padding: 6px 0 !important;
+      min-height: auto !important;
+    }
+    header .nav{
+      padding: 4px 0 !important;
+    }
+    header nav a{
+      padding: 4px 6px !important;
+      font-size: 13px !important;
+      line-height: 1 !important;
+    }
+    header .btn{
+      padding: 8px 12px !important;
+      font-size: 13px !important;
+      line-height: 1 !important;
+    }
+    header .lang-toggle button{
+      padding: 8px 10px !important;
+      line-height: 1 !important;
+    }
+    header .brand img{
+      width: 130px !important;
+    }
+    header *{
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
   </style>
 </head>
 
@@ -511,17 +549,14 @@
   <div class="topbar">
     <div class="container">
       <div class="topbar-left">
-        <!-- WhatsApp + phone -->
         <a class="toplink" href="https://wa.me/16175150595" target="_blank" rel="noopener">
           <i class="fa-brands fa-whatsapp"></i> <span>+1 617 515 0595</span>
         </a>
 
-        <!-- Phone + phone -->
         <a class="toplink" href="tel:+523757605676">
           <i class="fa-solid fa-phone"></i> <span>+52 375 760 5676</span>
         </a>
 
-        <!-- Email -->
         <a class="toplink" href="mailto:sales@mexilime.com?subject=MexiLime%20-%20Supply%20Inquiry">
           <i class="fa-solid fa-envelope"></i> <span>sales@mexilime.com</span>
         </a>
@@ -530,7 +565,6 @@
       <div class="topbar-right">
         <span style="font-weight:800; opacity:.92;">Fast quotes • Mexico → USA</span>
         <div class="social" aria-label="Social links">
-          <!-- LinkedIn (ajusta URL cuando tengas la página real) -->
           <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
@@ -835,6 +869,7 @@
         "product.title":"Our Product",
         "product.subtitle":"Seedless Persian limes from Mexico. Packing and logistics can be adjusted to your operation.",
         "product.cta":"Request Supply Info",
+
         "product.boxTitle":"Seedless Persian Lime",
         "product.boxSub":"Commercial supply for importers, distributors and wholesalers in the U.S.",
         "product.l1":"Origin: Mexico",
@@ -903,6 +938,7 @@
         "product.title":"Our Product",
         "product.subtitle":"Limón persa sin semilla de México. Ajustamos empaque y logística a tu operación.",
         "product.cta":"Solicitar Info",
+
         "product.boxTitle":"Limón persa sin semilla",
         "product.boxSub":"Suministro comercial para importadores, distribuidores y mayoristas en USA.",
         "product.l1":"Origen: México",
@@ -962,7 +998,6 @@
       localStorage.setItem("mexilime_lang", lang);
       document.documentElement.lang = lang;
 
-      // Form placeholders
       if(lang === "es"){
         document.getElementById("message").placeholder = "Destino, calibres preferidos, ventana de entrega, etc.";
       } else {
@@ -977,13 +1012,11 @@
     if(saved === "es" || saved === "en") applyLang(saved);
     else applyLang("en");
 
-    // Mobile menu
     const menuBtn = document.getElementById("menuBtn");
     const mobileMenu = document.getElementById("mobileMenu");
     menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
     mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.remove("open")));
 
-    // Form mailto submit (keeps it simple)
     document.getElementById("leadForm").addEventListener("submit", (e) => {
       e.preventDefault();
       const name = document.getElementById("name").value.trim();
@@ -1014,14 +1047,14 @@
   </script>
 
   <!--
-    ====== FILES YOU MUST ADD IN /assets ======
+    FILES YOU MUST ADD IN /assets:
     1) MexiLime Logo Horizontal.png
     2) MexiLime Logo Simplificado.png
-    3) hero-banner.jpg        (hero background)
-    4) about-banner.jpg       (about background)
-    5) product-banner.jpg     (product left image)
-    6) packing-banner.jpg     (packing right image)
-    7) contact-banner.jpg     (contact background)
+    3) hero-banner.jpg
+    4) about-banner.jpg
+    5) product-banner.jpg
+    6) packing-banner.jpg
+    7) contact-banner.jpg
   -->
 </body>
 </html>
