@@ -540,6 +540,14 @@
       margin-top: 0 !important;
       margin-bottom: 0 !important;
     }
+
+    /* ===== EMERGENCY: if what looks "too big" is actually the hero ===== */
+    .banner{ min-height: 420px !important; }
+    .banner .content{ padding: 44px 0 !important; }
+    @media (max-width:720px){
+      .banner{ min-height: 420px !important; }
+      .banner .content{ padding: 36px 0 !important; }
+    }
   </style>
 </head>
 
@@ -1058,3 +1066,4 @@
   -->
 </body>
 </html>
+
