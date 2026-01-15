@@ -472,6 +472,49 @@
       flex-wrap:wrap;
     }
     .footer-grid small{color:var(--muted); font-weight:650}
+
+    /* ===== Sticky header: grande arriba, compacto al hacer scroll ===== */
+
+    /* Estado normal (arriba) */
+    header{
+      transition: background .2s ease, padding .2s ease, box-shadow .2s ease;
+    }
+    
+    header .nav{
+      transition: min-height .2s ease;
+      min-height: 72px; /* 👈 header más alto arriba (ajusta 66–86) */
+    }
+    
+    header .brand img{
+      height: 48px;     /* 👈 logo grande arriba (ajusta 44–60) */
+      width: auto;
+      max-height: 48px;
+      transition: height .2s ease, max-height .2s ease, transform .2s ease;
+    }
+    
+    /* Estado "scrolled" (cuando bajas) */
+    header.is-scrolled{
+      background: rgba(8,36,19,.92);
+      box-shadow: 0 10px 24px rgba(0,0,0,.18);
+    }
+    
+    header.is-scrolled .nav{
+      min-height: 52px; /* 👈 header compacto al bajar (48–56) */
+    }
+    
+    header.is-scrolled .brand img{
+      height: 34px;     /* 👈 logo chico al bajar (30–38) */
+      max-height: 34px;
+    }
+    
+    /* (Opcional) si quieres que el logo se vea “más pro” al estar arriba */
+    header .brand img{
+      transform: translateY(0);
+    }
+    header.is-scrolled .brand img{
+      transform: translateY(0);
+    }
+    
   </style>
 </head>
 
@@ -965,10 +1008,25 @@
     });
 
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Shrink header on scroll
+      (function(){
+        const header = document.querySelector("header");
+        if(!header) return;
+    
+        const toggle = () => {
+          header.classList.toggle("is-scrolled", window.scrollY > 10);
+        };
+    
+        toggle();
+        window.addEventListener("scroll", toggle, { passive: true });
+      })();
+    
   </script>
 
 </body>
 </html>
+
 
 
 
