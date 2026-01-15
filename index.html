@@ -116,7 +116,7 @@
     }
     .brand img{
       height:60px;         /* 👈 stable logo height (prevents “expanding”) */
-      width:60px;
+      width:auto;
       max-height:100px;
       max-width:none;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,.18));
@@ -482,13 +482,13 @@
     
     header .nav{
       transition: min-height .2s ease;
-      min-height: 72px; /* 👈 header más alto arriba (ajusta 66–86) */
+      min-height: 100px; /* 👈 header más alto arriba (ajusta 66–86) */
     }
     
     header .brand img{
-      height: 48px;     /* 👈 logo grande arriba (ajusta 44–60) */
+      height: 64px;     /* 👈 logo grande arriba (ajusta 44–60) */
       width: auto;
-      max-height: 48px;
+      max-height: 64px;
       transition: height .2s ease, max-height .2s ease, transform .2s ease;
     }
     
@@ -1026,6 +1026,7 @@
 
 </body>
 </html>
+
 
 
 
