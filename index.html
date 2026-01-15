@@ -93,14 +93,21 @@
 
     /* ========= HEADER (compact, no extra gap) ========= */
     header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(8,36,19,.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  padding: 8px 0;
-}
+      position:sticky;
+      top:0;
+      z-index:50;
+      background: rgba(8,36,19,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding:8px 0;                 /* ✅ KEY: compact header */
+    }
+
+    /* ✅ Prevent hidden margins inside header inflating height */
+    header *{
+      margin-top:0;
+      margin-bottom:0;
+    }
+
     .nav{
       display:flex;
       align-items:center;
@@ -108,6 +115,7 @@
       gap:14px;
       padding:6px 0; /* compact */
     }
+
     .brand{
       display:flex; align-items:center;
       min-width:180px;
@@ -119,7 +127,7 @@
     }
 
     nav ul{
-      list-style:none; margin:0; padding:0;
+      list-style:none; padding:0;
       display:flex; gap:18px; align-items:center;
     }
     nav a{
@@ -130,6 +138,9 @@
       padding:6px 8px;
       border-radius:12px;
       text-transform:uppercase;
+      display:inline-flex;
+      align-items:center;
+      line-height:1; /* helps keep it compact */
     }
     nav a:hover{background: rgba(255,255,255,.10)}
 
@@ -147,6 +158,7 @@
       cursor:pointer;
       transition: transform .05s ease, box-shadow .2s ease, background .2s ease, opacity .2s ease;
       white-space:nowrap;
+      line-height:1;
     }
     .btn:active{transform: translateY(1px)}
     .btn-primary{
@@ -178,6 +190,7 @@
       font-weight:900;
       cursor:pointer;
       min-width:46px;
+      line-height:1;
     }
     .lang-toggle button.active{
       background: rgba(255,255,255,.16);
@@ -265,22 +278,6 @@
       border:1px solid rgba(255,255,255,.22);
     }
     .btn-dark:hover{background: rgba(0,0,0,.28)}
-
-    .chips{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:18px;
-    }
-    .chip{
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.20);
-      background: rgba(0,0,0,.16);
-      color: rgba(255,255,255,.92);
-      font-weight:800;
-      font-size:13px;
-      letter-spacing:.2px;
-      white-space:nowrap;
-    }
 
     /* ========= ABOUT CARDS (4) ========= */
     .section{
@@ -583,7 +580,6 @@
 
   <!-- HERO BANNER -->
   <section id="home" class="banner" aria-label="Hero banner">
-    <!-- Replace this image with your real hero banner -->
     <div class="bg" style="background-image:url('assets/hero-banner.jpg');"></div>
     <div class="overlay"></div>
 
@@ -597,11 +593,13 @@
         <div class="banner-actions">
           <a class="btn btn-primary" href="#contact" data-i18n="hero.cta1">Contact Us</a>
           <a class="btn btn-dark" href="#product" data-i18n="hero.cta2">Our Products</a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ABOUT BANNER -->
   <section id="about" class="banner" aria-label="About banner" style="min-height: 420px;">
-    <!-- Replace with real about banner image -->
     <div class="bg" style="background-image:url('assets/about-banner.jpg');"></div>
     <div class="overlay"></div>
 
@@ -646,7 +644,7 @@
     </div>
   </section>
 
-  <!-- OUR PRODUCT (same content, new visuals) -->
+  <!-- OUR PRODUCT -->
   <section id="product" class="section" aria-label="Our products">
     <div class="container">
       <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:18px; flex-wrap:wrap;">
@@ -703,7 +701,7 @@
     </div>
   </section>
 
-  <!-- EXPORT (kept simple) -->
+  <!-- EXPORT -->
   <section id="export" class="section section-muted" aria-label="Export and logistics">
     <div class="container">
       <h2 style="margin:0; font-size:34px; letter-spacing:-.5px;" data-i18n="export.title">Export & Logistics</h2>
@@ -736,9 +734,8 @@
     </div>
   </section>
 
-  <!-- CONTACT (background + simple form, like reference) -->
+  <!-- CONTACT -->
   <section id="contact" class="contact-banner" aria-label="Contact us">
-    <!-- Replace with real contact background image -->
     <div class="bg" style="background-image:url('assets/contact-banner.jpg');"></div>
     <div class="overlay"></div>
 
@@ -822,10 +819,6 @@
         "hero.lead":"Our mission is to provide reliable export supply while creating more value across the supply chain—supporting the people behind the harvest and building long-term partnerships.",
         "hero.cta1":"Contact Us",
         "hero.cta2":"Our Products",
-        "hero.chip1":"Seedless Persian Lime",
-        "hero.chip2":"Mexico → USA",
-        "hero.chip3":"Commercial Supply",
-        "hero.chip4":"Export Ready",
 
         "about.title":"About MexiLime",
         "about.text":"MexiLime is a 100% Mexican company founded in the heart of Jalisco by lime growers—focused on delivering top-quality fruit and creating more value across the supply chain to support a more dignified life for field workers.",
@@ -894,10 +887,6 @@
         "hero.lead":"Nuestra misión es asegurar un suministro confiable para exportación, creando más valor en la cadena y apoyando a la gente detrás de la cosecha con alianzas de largo plazo.",
         "hero.cta1":"Contact Us",
         "hero.cta2":"Productos",
-        "hero.chip1":"Limón persa sin semilla",
-        "hero.chip2":"México → USA",
-        "hero.chip3":"Suministro comercial",
-        "hero.chip4":"Listo para exportar",
 
         "about.title":"About MexiLime",
         "about.text":"MexiLime es una empresa 100% mexicana fundada en el corazón de Jalisco por productores de limón—con la misión de asegurar la mayor calidad en cada envío y generar más valor en la cadena de suministro para dar una vida más digna a la gente del campo.",
@@ -1033,11 +1022,6 @@
     5) product-banner.jpg     (product left image)
     6) packing-banner.jpg     (packing right image)
     7) contact-banner.jpg     (contact background)
-
-    If you don't have them yet, upload any placeholders with those exact names to avoid blank backgrounds.
   -->
 </body>
 </html>
-
-
-
