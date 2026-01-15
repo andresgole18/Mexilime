@@ -553,6 +553,54 @@
       padding-top: 0 !important;
       padding-bottom: 0 !important;
     }
+
+    /* ===== FIX: stop header from expanding after assets load ===== */
+
+    /* 1) Fix a stable header height */
+    header{
+      padding: 0 !important;
+    }
+    
+    header .nav{
+      min-height: 52px !important;   /* ajusta: 48–56 según te guste */
+      padding: 0 !important;
+      align-items: center !important;
+    }
+    
+    /* 2) Force logo to a fixed height so it can’t inflate the header */
+    header .brand{
+      min-width: auto !important;
+      display: flex !important;
+      align-items: center !important;
+    }
+    
+    header .brand img{
+      height: 34px !important;       /* 👈 clave: altura fija */
+      width: auto !important;        /* mantiene proporción */
+      max-height: 34px !important;
+      max-width: none !important;
+    }
+    
+    /* 3) Keep nav items from adding vertical height */
+    header nav a{
+      padding: 4px 8px !important;
+      line-height: 1 !important;
+    }
+    
+    header .btn{
+      padding: 8px 12px !important;
+      line-height: 1 !important;
+    }
+    
+    header .lang-toggle button{
+      padding: 8px 10px !important;
+      line-height: 1 !important;
+    }
+    
+    /* 4) Just in case: kill default margins */
+    header ul{ margin: 0 !important; padding: 0 !important; }
+    header *{ margin-top: 0 !important; margin-bottom: 0 !important; }
+
     
   </style>
 </head>
@@ -1072,5 +1120,6 @@
   -->
 </body>
 </html>
+
 
 
