@@ -1,0 +1,1037 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="MexiLime exports seedless Persian limes from Mexico to the U.S. Reliable volume, export-ready logistics, and competitive commercial supply." />
+  <title>MexiLime | Seedless Persian Lime Export Mexico → USA</title>
+
+  <!-- Favicon (usa tu logo simplificado) -->
+  <link rel="icon" type="image/png" href="assets/MexiLime Logo Simplificado.png" />
+
+  <!-- Icons (WhatsApp/Phone/Email/LinkedIn) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root{
+      --green-950:#082413;
+      --green-900:#0f3d21;
+      --green-850:#114427;
+      --green-800:#14502b;
+      --green-700:#1b6a35;
+      --lime-500:#A6CE39;
+
+      --bg:#ffffff;
+      --text:#1b1f1d;
+      --muted:#6c7a73;
+
+      --border:#e5efe9;
+      --shadow: 0 12px 32px rgba(0,0,0,.14);
+      --radius: 20px;
+      --max: 1160px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; height:auto; display:block}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    /* ========= TOPBAR (solid, white text, icons, LinkedIn on right) ========= */
+    .topbar{
+      background: var(--green-850);
+      color:#fff;
+      font-size:14px;
+    }
+    .topbar .container{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 20px;
+    }
+    .topbar-left, .topbar-right{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    .toplink{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      color:#fff;
+      opacity:.98;
+    }
+    .toplink i{opacity:.95}
+    .toplink:hover{opacity:1; text-decoration:underline}
+    .social{
+      display:flex; align-items:center; gap:10px;
+    }
+    .social a{
+      width:34px; height:34px;
+      display:inline-flex; align-items:center; justify-content:center;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.08);
+      color:#fff;
+    }
+    .social a:hover{background: rgba(255,255,255,.14)}
+
+    @media (max-width: 720px){
+      .topbar .container{padding:10px 14px}
+      .topbar-left{gap:12px}
+    }
+
+    /* ========= HEADER (compact, no extra gap) ========= */
+    header{
+      position:sticky; top:0; z-index:50;
+      background: rgba(8,36,19,.85);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:10px 0; /* compact */
+    }
+    .brand{
+      display:flex; align-items:center;
+      min-width:180px;
+    }
+    .brand img{
+      width:185px;
+      max-width:52vw;
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,.18));
+    }
+
+    nav ul{
+      list-style:none; margin:0; padding:0;
+      display:flex; gap:18px; align-items:center;
+    }
+    nav a{
+      color:rgba(255,255,255,.92);
+      font-weight:800;
+      font-size:14px;
+      letter-spacing:.2px;
+      padding:8px 10px;
+      border-radius:12px;
+      text-transform:uppercase;
+    }
+    nav a:hover{background: rgba(255,255,255,.10)}
+
+    .nav-right{
+      display:flex; align-items:center; gap:10px;
+    }
+
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
+      padding:12px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.16);
+      font-weight:900;
+      cursor:pointer;
+      transition: transform .05s ease, box-shadow .2s ease, background .2s ease, opacity .2s ease;
+      white-space:nowrap;
+    }
+    .btn:active{transform: translateY(1px)}
+    .btn-primary{
+      background: linear-gradient(135deg, var(--lime-500), #39d37b);
+      color:#052312;
+      border-color: transparent;
+      box-shadow: 0 14px 26px rgba(57,211,123,.18);
+    }
+    .btn-primary:hover{box-shadow: 0 18px 32px rgba(57,211,123,.22)}
+    .btn-ghost{
+      background: transparent;
+      color:#fff;
+    }
+    .btn-ghost:hover{background: rgba(255,255,255,.10)}
+
+    /* Language toggle (compact, like reference) */
+    .lang-toggle{
+      display:inline-flex;
+      border:1px solid rgba(255,255,255,.18);
+      border-radius:14px;
+      overflow:hidden;
+      background: rgba(0,0,0,.18);
+    }
+    .lang-toggle button{
+      appearance:none; border:0;
+      background: transparent;
+      color:#fff;
+      padding:10px 12px;
+      font-weight:900;
+      cursor:pointer;
+      min-width:46px;
+    }
+    .lang-toggle button.active{
+      background: rgba(255,255,255,.16);
+    }
+
+    /* Mobile */
+    .menu-btn{display:none}
+    @media (max-width: 980px){
+      nav ul{display:none}
+      .menu-btn{display:inline-flex}
+    }
+    .mobile-menu{
+      display:none;
+      background: rgba(8,36,19,.92);
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .mobile-menu.open{display:block}
+    .mobile-menu a{
+      display:block;
+      padding:14px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      font-weight:900;
+      color:#fff;
+      text-transform:uppercase;
+      letter-spacing:.2px;
+    }
+    .mobile-menu a:last-child{border-bottom:0}
+
+    /* ========= FULL-WIDTH BANNER SECTIONS ========= */
+    .banner{
+      position:relative;
+      min-height: 520px;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      overflow:hidden;
+    }
+    .banner .bg{
+      position:absolute; inset:0;
+      background-size:cover;
+      background-position:center;
+      transform: scale(1.02);
+    }
+    .banner .overlay{
+      position:absolute; inset:0;
+      background:
+        radial-gradient(900px 520px at 18% 30%, rgba(8,36,19,.72), rgba(8,36,19,.40) 55%, rgba(8,36,19,.20) 75%, rgba(8,36,19,.10)),
+        linear-gradient(180deg, rgba(8,36,19,.62), rgba(8,36,19,.55));
+    }
+    .banner .content{
+      position:relative;
+      width:100%;
+      padding: 78px 0;
+    }
+    .banner h1, .banner h2{
+      margin:0 0 14px;
+      line-height:1.05;
+      letter-spacing:-.9px;
+      text-shadow: 0 10px 26px rgba(0,0,0,.35);
+    }
+    .banner h1{font-size:56px}
+    .banner h2{font-size:44px}
+    .banner p{
+      margin:0 0 18px;
+      max-width:70ch;
+      font-size:18px;
+      color: rgba(255,255,255,.88);
+      font-weight:650;
+    }
+    @media (max-width: 720px){
+      .banner{min-height: 520px}
+      .banner h1{font-size:40px}
+      .banner h2{font-size:34px}
+      .banner p{font-size:16px}
+      .banner .content{padding: 58px 0}
+    }
+
+    .banner-actions{
+      display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+      margin-top:18px;
+    }
+    .btn-dark{
+      background: rgba(0,0,0,.22);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.22);
+    }
+    .btn-dark:hover{background: rgba(0,0,0,.28)}
+
+    .chips{
+      display:flex; flex-wrap:wrap; gap:10px;
+      margin-top:18px;
+    }
+    .chip{
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.20);
+      background: rgba(0,0,0,.16);
+      color: rgba(255,255,255,.92);
+      font-weight:800;
+      font-size:13px;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    /* ========= ABOUT CARDS (4) ========= */
+    .section{
+      padding: 54px 0;
+      background:#fff;
+    }
+    .section-muted{
+      background: #fbfdfb;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+    }
+    .cards-4{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap:14px;
+      margin-top: 18px;
+    }
+    @media (max-width: 980px){
+      .cards-4{grid-template-columns: repeat(2, 1fr)}
+    }
+    @media (max-width: 520px){
+      .cards-4{grid-template-columns: 1fr}
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      padding:18px;
+      box-shadow: 0 10px 26px rgba(0,0,0,.06);
+    }
+    .card .icon{
+      width:46px; height:46px;
+      border-radius:16px;
+      display:flex; align-items:center; justify-content:center;
+      background: rgba(166,206,57,.18);
+      border:1px solid rgba(166,206,57,.35);
+      color: var(--green-900);
+      font-size:18px;
+      margin-bottom:12px;
+    }
+    .card strong{
+      display:block;
+      font-size:16px;
+      margin-bottom:6px;
+      letter-spacing:-.2px;
+    }
+    .card p{
+      margin:0;
+      color: var(--muted);
+      font-weight:650;
+    }
+
+    /* ========= PRODUCT (same content, new visual language) ========= */
+    .product-wrap{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap:16px;
+      margin-top:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 980px){
+      .product-wrap{grid-template-columns:1fr}
+    }
+    .product-box{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      overflow:hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+    }
+    .product-hero{
+      position:relative;
+      min-height: 220px;
+      background-size:cover;
+      background-position:center;
+    }
+    .product-hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background: linear-gradient(90deg, rgba(8,36,19,.78), rgba(8,36,19,.20));
+    }
+    .product-hero .ph-content{
+      position:relative;
+      padding:18px;
+      color:#fff;
+      max-width: 62ch;
+    }
+    .product-hero .ph-content strong{
+      font-size:18px;
+      letter-spacing:-.2px;
+      display:block;
+      margin-bottom:6px;
+    }
+    .product-hero .ph-content span{
+      color: rgba(255,255,255,.86);
+      font-weight:650;
+    }
+    .product-body{
+      padding:18px;
+      display:grid;
+      gap:12px;
+    }
+    .list{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+    }
+    .list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      color: var(--muted);
+      font-weight:650;
+    }
+    .dot{
+      width:10px; height:10px; margin-top:7px;
+      border-radius:999px; background:var(--lime-500);
+      box-shadow: 0 0 0 4px rgba(166,206,57,.18);
+      flex:0 0 auto;
+    }
+
+    /* ========= CONTACT (background image + simple form) ========= */
+    .contact-banner{
+      position:relative;
+      padding: 76px 0;
+      color:#fff;
+      overflow:hidden;
+    }
+    .contact-banner .bg{
+      position:absolute; inset:0;
+      background-size:cover;
+      background-position:center;
+      filter: saturate(1.05);
+    }
+    .contact-banner .overlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(8,36,19,.72), rgba(8,36,19,.72));
+    }
+    .contact-banner .content{
+      position:relative;
+    }
+    .contact-banner h2{
+      margin:0 0 8px;
+      font-size:38px;
+      letter-spacing:-.6px;
+    }
+    .contact-banner p{
+      margin:0 0 20px;
+      color: rgba(255,255,255,.88);
+      font-weight:650;
+      max-width:70ch;
+    }
+
+    .simple-form{
+      max-width: 820px;
+      margin-top: 10px;
+    }
+    .form-grid{
+      display:grid;
+      gap:14px;
+    }
+    .form-row{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    @media (max-width: 720px){
+      .form-row{grid-template-columns:1fr}
+    }
+    label{
+      display:block;
+      font-weight:900;
+      letter-spacing:.2px;
+      margin-bottom:6px;
+      color: rgba(255,255,255,.92);
+    }
+    input, textarea{
+      width:100%;
+      padding:16px 18px;
+      border-radius:999px;
+      border:0;
+      outline:none;
+      font: inherit;
+      background:#fff;
+      color:#0f1d14;
+    }
+    textarea{
+      border-radius: 22px;
+      min-height: 160px;
+      resize: vertical;
+      padding:18px;
+    }
+    .send-row{
+      display:flex;
+      justify-content:center;
+      margin-top: 6px;
+    }
+    .btn-send{
+      padding:14px 26px;
+      border-radius:999px;
+      border:0;
+      font-weight:1000;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      cursor:pointer;
+      background: var(--lime-500);
+      color:#0b2415;
+      box-shadow: 0 14px 26px rgba(166,206,57,.24);
+    }
+    .btn-send:hover{opacity:.95}
+
+    /* ========= FOOTER ========= */
+    footer{
+      padding:26px 0;
+      background:#fff;
+      border-top:1px solid var(--border);
+    }
+    .footer-grid{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; flex-wrap:wrap;
+    }
+    .footer-grid small{color:var(--muted); font-weight:650}
+  </style>
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <!-- WhatsApp + phone -->
+        <a class="toplink" href="https://wa.me/16175150595" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> <span>+1 617 515 0595</span>
+        </a>
+
+        <!-- Phone + phone -->
+        <a class="toplink" href="tel:+523757605676">
+          <i class="fa-solid fa-phone"></i> <span>+52 375 760 5676</span>
+        </a>
+
+        <!-- Email -->
+        <a class="toplink" href="mailto:sales@mexilime.com?subject=MexiLime%20-%20Supply%20Inquiry">
+          <i class="fa-solid fa-envelope"></i> <span>sales@mexilime.com</span>
+        </a>
+      </div>
+
+      <div class="topbar-right">
+        <span style="font-weight:800; opacity:.92;">Fast quotes • Mexico → USA</span>
+        <div class="social" aria-label="Social links">
+          <!-- LinkedIn (ajusta URL cuando tengas la página real) -->
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="#home" aria-label="MexiLime">
+          <img src="assets/MexiLime Logo Horizontal.png" alt="MexiLime logo" />
+        </a>
+
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="#home" data-i18n="nav.home">Home</a></li>
+            <li><a href="#about" data-i18n="nav.about">About</a></li>
+            <li><a href="#product" data-i18n="nav.product">Our Products</a></li>
+            <li><a href="#export" data-i18n="nav.export">Export</a></li>
+            <li><a href="#contact" data-i18n="nav.contact">Contact Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-right">
+          <div class="lang-toggle" aria-label="Language toggle">
+            <button id="btnES" type="button">ES</button>
+            <button id="btnEN" class="active" type="button">EN</button>
+          </div>
+
+          <a class="btn btn-ghost menu-btn" id="menuBtn" href="javascript:void(0)" aria-label="Open menu">Menu</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="nav.cta">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+      <a href="#home" data-i18n="nav.home">Home</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#product" data-i18n="nav.product">Our Products</a>
+      <a href="#export" data-i18n="nav.export">Export</a>
+      <a href="#contact" data-i18n="nav.contact">Contact Us</a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <section id="home" class="banner" aria-label="Hero banner">
+    <!-- Replace this image with your real hero banner -->
+    <div class="bg" style="background-image:url('assets/hero-banner.jpg');"></div>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <div class="container">
+        <h1 data-i18n="hero.title">We deliver Mexico’s freshest seedless Persian limes to the U.S. market.</h1>
+        <p data-i18n="hero.lead">
+          Our mission is to provide reliable export supply while creating more value across the supply chain—supporting the people behind the harvest and building long-term partnerships.
+        </p>
+
+        <div class="banner-actions">
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.cta1">Contact Us</a>
+          <a class="btn btn-dark" href="#product" data-i18n="hero.cta2">Our Products</a>
+  </section>
+
+  <!-- ABOUT BANNER -->
+  <section id="about" class="banner" aria-label="About banner" style="min-height: 420px;">
+    <!-- Replace with real about banner image -->
+    <div class="bg" style="background-image:url('assets/about-banner.jpg');"></div>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <div class="container">
+        <h2 data-i18n="about.title">About MexiLime</h2>
+        <p data-i18n="about.text">
+          MexiLime is a 100% Mexican company founded in the heart of Jalisco by lime growers—focused on delivering top-quality fruit and creating more value across the supply chain to support a more dignified life for field workers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT CARDS (4) -->
+  <section class="section section-muted" aria-label="About highlights">
+    <div class="container">
+      <div class="cards-4">
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <strong data-i18n="cards.c1t">Mexican Origin</strong>
+          <p data-i18n="cards.c1p">Born in Jalisco, working directly with local growers and packing operations.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-award"></i></div>
+          <strong data-i18n="cards.c2t">Quality First</strong>
+          <p data-i18n="cards.c2p">Strict selection, sizing, and handling to meet export and buyer specs.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-link"></i></div>
+          <strong data-i18n="cards.c3t">Value-Driven Supply Chain</strong>
+          <p data-i18n="cards.c3p">We add value to create efficiency, fairness, and long-term sustainability.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <strong data-i18n="cards.c4t">People Behind the Fruit</strong>
+          <p data-i18n="cards.c4p">Committed to supporting dignified opportunities for field workers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PRODUCT (same content, new visuals) -->
+  <section id="product" class="section" aria-label="Our products">
+    <div class="container">
+      <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:18px; flex-wrap:wrap;">
+        <div>
+          <h2 style="margin:0; font-size:34px; letter-spacing:-.5px;" data-i18n="product.title">Our Product</h2>
+          <p style="margin:8px 0 0; color:var(--muted); font-weight:650; max-width:75ch;" data-i18n="product.subtitle">
+            Seedless Persian limes from Mexico. Packing and logistics can be adjusted to your operation.
+          </p>
+        </div>
+        <a class="btn btn-primary" href="#contact" data-i18n="product.cta">Request Supply Info</a>
+      </div>
+
+      <div class="product-wrap">
+        <div class="product-box">
+          <div class="product-hero" style="background-image:url('assets/product-banner.jpg');">
+            <div class="ph-content">
+              <strong data-i18n="product.boxTitle">Seedless Persian Lime</strong>
+              <span data-i18n="product.boxSub">Commercial supply for importers, distributors and wholesalers in the U.S.</span>
+            </div>
+          </div>
+
+          <div class="product-body">
+            <ul class="list">
+              <li><span class="dot"></span><span data-i18n="product.l1">Origin: Mexico</span></li>
+              <li><span class="dot"></span><span data-i18n="product.l2">Type: Persian lime (seedless)</span></li>
+              <li><span class="dot"></span><span data-i18n="product.l3">Supply: consistent weekly availability (seasonality may apply)</span></li>
+              <li><span class="dot"></span><span data-i18n="product.l4">Quality: commercial export standards</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="product-box">
+          <div class="product-hero" style="background-image:url('assets/packing-banner.jpg');">
+            <div class="ph-content">
+              <strong data-i18n="product.packTitle">Packing & Logistics</strong>
+              <span data-i18n="product.packSub">Built to reduce risk and speed up decision-making for buyers.</span>
+            </div>
+          </div>
+
+          <div class="product-body">
+            <ul class="list">
+              <li><span class="dot"></span><span data-i18n="product.p1">Cartons & pallets (customizable)</span></li>
+              <li><span class="dot"></span><span data-i18n="product.p2">Labeling options for distribution</span></li>
+              <li><span class="dot"></span><span data-i18n="product.p3">Cold chain coordination</span></li>
+              <li><span class="dot"></span><span data-i18n="product.p4">Incoterms: FOB / CIF (case-by-case)</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p style="margin:14px 0 0; color:var(--muted); font-weight:650;" data-i18n="product.note">
+        Add your real images in /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.
+      </p>
+    </div>
+  </section>
+
+  <!-- EXPORT (kept simple) -->
+  <section id="export" class="section section-muted" aria-label="Export and logistics">
+    <div class="container">
+      <h2 style="margin:0; font-size:34px; letter-spacing:-.5px;" data-i18n="export.title">Export & Logistics</h2>
+      <p style="margin:8px 0 0; color:var(--muted); font-weight:650; max-width:75ch;" data-i18n="export.subtitle">
+        Structured for U.S. buyers: clear documentation, coordinated logistics, and consistent communication.
+      </p>
+
+      <div class="cards-4" style="margin-top:18px;">
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-file-circle-check"></i></div>
+          <strong data-i18n="export.e1t">Documentation</strong>
+          <p data-i18n="export.e1p">Export paperwork coordination and operational support for smooth shipments.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-snowflake"></i></div>
+          <strong data-i18n="export.e2t">Cold Chain</strong>
+          <p data-i18n="export.e2p">Handling aligned to preserve quality during transport and delivery.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-truck-fast"></i></div>
+          <strong data-i18n="export.e3t">Logistics</strong>
+          <p data-i18n="export.e3p">Mexico–USA coordination and shipment planning for commercial volume.</p>
+        </div>
+        <div class="card">
+          <div class="icon"><i class="fa-solid fa-handshake"></i></div>
+          <strong data-i18n="export.e4t">Commercial Flexibility</strong>
+          <p data-i18n="export.e4p">FOB / CIF options and packing adjustments based on destination and volume.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT (background + simple form, like reference) -->
+  <section id="contact" class="contact-banner" aria-label="Contact us">
+    <!-- Replace with real contact background image -->
+    <div class="bg" style="background-image:url('assets/contact-banner.jpg');"></div>
+    <div class="overlay"></div>
+
+    <div class="content">
+      <div class="container">
+        <h2 data-i18n="contact.title">Contact Us</h2>
+        <p data-i18n="contact.subtitle">
+          Send your request and we’ll reply with availability, packing options, and next steps.
+        </p>
+
+        <form id="leadForm" class="simple-form">
+          <div class="form-grid">
+            <div>
+              <label for="name" data-i18n="contact.name">Name</label>
+              <input id="name" name="name" required />
+            </div>
+
+            <div>
+              <label for="company" data-i18n="contact.company">Company</label>
+              <input id="company" name="company" required />
+            </div>
+
+            <div class="form-row">
+              <div>
+                <label for="email" data-i18n="contact.email">Email</label>
+                <input id="email" name="email" type="email" required />
+              </div>
+              <div>
+                <label for="phone" data-i18n="contact.phone">Phone number</label>
+                <input id="phone" name="phone" />
+              </div>
+            </div>
+
+            <div>
+              <label for="message" data-i18n="contact.message">Message</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+
+            <div class="send-row">
+              <button class="btn-send" type="submit" data-i18n="contact.send">Send</button>
+            </div>
+
+            <p style="margin:0; font-size:12.5px; color:rgba(255,255,255,.85); font-weight:650;">
+              <span data-i18n="contact.tip">Tip:</span>
+              <span data-i18n="contact.tipText">Include destination (city/state), weekly pallets, preferred size range, and FOB/CIF preference.</span>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div style="display:flex; align-items:center; gap:12px;">
+          <img src="assets/MexiLime Logo Simplificado.png" alt="MexiLime icon" style="width:34px; height:34px;" />
+          <div>
+            <strong>MexiLime</strong><br/>
+            <small data-i18n="footer.tag">Seedless Persian Lime Export • Mexico → USA</small>
+          </div>
+        </div>
+        <small>© <span id="year"></span> MexiLime. <span data-i18n="footer.rights">All rights reserved.</span></small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ====== Language (EN/ES) ======
+    const i18n = {
+      en: {
+        "nav.home":"Home",
+        "nav.about":"About",
+        "nav.product":"Our Products",
+        "nav.export":"Export",
+        "nav.contact":"Contact Us",
+        "nav.cta":"Contact Us",
+
+        "hero.title":"We deliver Mexico’s freshest seedless Persian limes to the U.S. market.",
+        "hero.lead":"Our mission is to provide reliable export supply while creating more value across the supply chain—supporting the people behind the harvest and building long-term partnerships.",
+        "hero.cta1":"Contact Us",
+        "hero.cta2":"Our Products",
+        "hero.chip1":"Seedless Persian Lime",
+        "hero.chip2":"Mexico → USA",
+        "hero.chip3":"Commercial Supply",
+        "hero.chip4":"Export Ready",
+
+        "about.title":"About MexiLime",
+        "about.text":"MexiLime is a 100% Mexican company founded in the heart of Jalisco by lime growers—focused on delivering top-quality fruit and creating more value across the supply chain to support a more dignified life for field workers.",
+
+        "cards.c1t":"Mexican Origin",
+        "cards.c1p":"Born in Jalisco, working directly with local growers and packing operations.",
+        "cards.c2t":"Quality First",
+        "cards.c2p":"Strict selection, sizing, and handling to meet export and buyer specs.",
+        "cards.c3t":"Value-Driven Supply Chain",
+        "cards.c3p":"We add value to create efficiency, fairness, and long-term sustainability.",
+        "cards.c4t":"People Behind the Fruit",
+        "cards.c4p":"Committed to supporting dignified opportunities for field workers.",
+
+        "product.title":"Our Product",
+        "product.subtitle":"Seedless Persian limes from Mexico. Packing and logistics can be adjusted to your operation.",
+        "product.cta":"Request Supply Info",
+        "product.boxTitle":"Seedless Persian Lime",
+        "product.boxSub":"Commercial supply for importers, distributors and wholesalers in the U.S.",
+        "product.l1":"Origin: Mexico",
+        "product.l2":"Type: Persian lime (seedless)",
+        "product.l3":"Supply: consistent weekly availability (seasonality may apply)",
+        "product.l4":"Quality: commercial export standards",
+        "product.packTitle":"Packing & Logistics",
+        "product.packSub":"Built to reduce risk and speed up decision-making for buyers.",
+        "product.p1":"Cartons & pallets (customizable)",
+        "product.p2":"Labeling options for distribution",
+        "product.p3":"Cold chain coordination",
+        "product.p4":"Incoterms: FOB / CIF (case-by-case)",
+        "product.note":"Add your real images in /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.",
+
+        "export.title":"Export & Logistics",
+        "export.subtitle":"Structured for U.S. buyers: clear documentation, coordinated logistics, and consistent communication.",
+        "export.e1t":"Documentation",
+        "export.e1p":"Export paperwork coordination and operational support for smooth shipments.",
+        "export.e2t":"Cold Chain",
+        "export.e2p":"Handling aligned to preserve quality during transport and delivery.",
+        "export.e3t":"Logistics",
+        "export.e3p":"Mexico–USA coordination and shipment planning for commercial volume.",
+        "export.e4t":"Commercial Flexibility",
+        "export.e4p":"FOB / CIF options and packing adjustments based on destination and volume.",
+
+        "contact.title":"Contact Us",
+        "contact.subtitle":"Send your request and we’ll reply with availability, packing options, and next steps.",
+        "contact.name":"Name",
+        "contact.company":"Company",
+        "contact.email":"Email",
+        "contact.phone":"Phone number",
+        "contact.message":"Message",
+        "contact.send":"Send",
+        "contact.tip":"Tip:",
+        "contact.tipText":"Include destination (city/state), weekly pallets, preferred size range, and FOB/CIF preference.",
+
+        "footer.tag":"Seedless Persian Lime Export • Mexico → USA",
+        "footer.rights":"All rights reserved."
+      },
+
+      es: {
+        "nav.home":"Inicio",
+        "nav.about":"About",
+        "nav.product":"Productos",
+        "nav.export":"Exportación",
+        "nav.contact":"Contact Us",
+        "nav.cta":"Contact Us",
+
+        "hero.title":"Suministramos limón persa sin semilla de México para el mercado de USA.",
+        "hero.lead":"Nuestra misión es asegurar un suministro confiable para exportación, creando más valor en la cadena y apoyando a la gente detrás de la cosecha con alianzas de largo plazo.",
+        "hero.cta1":"Contact Us",
+        "hero.cta2":"Productos",
+        "hero.chip1":"Limón persa sin semilla",
+        "hero.chip2":"México → USA",
+        "hero.chip3":"Suministro comercial",
+        "hero.chip4":"Listo para exportar",
+
+        "about.title":"About MexiLime",
+        "about.text":"MexiLime es una empresa 100% mexicana fundada en el corazón de Jalisco por productores de limón—con la misión de asegurar la mayor calidad en cada envío y generar más valor en la cadena de suministro para dar una vida más digna a la gente del campo.",
+
+        "cards.c1t":"Origen Mexicano",
+        "cards.c1p":"Nacimos en Jalisco y trabajamos directo con productores y operaciones de empaque.",
+        "cards.c2t":"Calidad Primero",
+        "cards.c2p":"Selección, calibrado y manejo para cumplir especificaciones de exportación.",
+        "cards.c3t":"Cadena de Valor",
+        "cards.c3p":"Agregamos valor para mayor eficiencia, comercio justo y sostenibilidad.",
+        "cards.c4t":"Gente del Campo",
+        "cards.c4p":"Comprometidos con oportunidades más dignas para quienes hacen posible la cosecha.",
+
+        "product.title":"Our Product",
+        "product.subtitle":"Limón persa sin semilla de México. Ajustamos empaque y logística a tu operación.",
+        "product.cta":"Solicitar Info",
+        "product.boxTitle":"Limón persa sin semilla",
+        "product.boxSub":"Suministro comercial para importadores, distribuidores y mayoristas en USA.",
+        "product.l1":"Origen: México",
+        "product.l2":"Tipo: Limón persa (sin semilla)",
+        "product.l3":"Suministro: disponibilidad semanal (puede variar por estacionalidad)",
+        "product.l4":"Calidad: estándares comerciales de exportación",
+        "product.packTitle":"Empaque y Logística",
+        "product.packSub":"Diseñado para reducir riesgo y acelerar decisiones de compra.",
+        "product.p1":"Cajas y tarimas (personalizable)",
+        "product.p2":"Etiquetado para distribución",
+        "product.p3":"Coordinación de cadena fría",
+        "product.p4":"Incoterms: FOB / CIF (según caso)",
+        "product.note":"Agrega tus imágenes en /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.",
+
+        "export.title":"Exportación y Logística",
+        "export.subtitle":"Estructurados para buyers en USA: documentación clara, logística coordinada y comunicación constante.",
+        "export.e1t":"Documentación",
+        "export.e1p":"Coordinación de papelería y soporte operativo para embarques fluidos.",
+        "export.e2t":"Cadena fría",
+        "export.e2p":"Manejo para conservar calidad durante transporte y entrega.",
+        "export.e3t":"Logística",
+        "export.e3p":"Coordinación México–USA y planeación de embarques para volumen comercial.",
+        "export.e4t":"Flexibilidad",
+        "export.e4p":"Opciones FOB / CIF y ajustes según destino y volumen.",
+
+        "contact.title":"Contact Us",
+        "contact.subtitle":"Envíanos tu solicitud y respondemos con disponibilidad, empaque y siguientes pasos.",
+        "contact.name":"Nombre",
+        "contact.company":"Empresa",
+        "contact.email":"Correo",
+        "contact.phone":"Teléfono",
+        "contact.message":"Mensaje",
+        "contact.send":"Enviar",
+        "contact.tip":"Tip:",
+        "contact.tipText":"Incluye destino (ciudad/estado), tarimas por semana, calibres y preferencia FOB/CIF.",
+
+        "footer.tag":"Exportación de Limón Persa Sin Semilla • México → USA",
+        "footer.rights":"Todos los derechos reservados."
+      }
+    };
+
+    let currentLang = "en";
+
+    function applyLang(lang){
+      currentLang = lang;
+
+      document.getElementById("btnEN").classList.toggle("active", lang === "en");
+      document.getElementById("btnES").classList.toggle("active", lang === "es");
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = i18n[lang][key];
+        if(!val) return;
+        el.innerHTML = val;
+      });
+
+      localStorage.setItem("mexilime_lang", lang);
+      document.documentElement.lang = lang;
+
+      // Form placeholders
+      if(lang === "es"){
+        document.getElementById("message").placeholder = "Destino, calibres preferidos, ventana de entrega, etc.";
+      } else {
+        document.getElementById("message").placeholder = "Destination, preferred sizes, delivery window, etc.";
+      }
+    }
+
+    document.getElementById("btnEN").addEventListener("click", () => applyLang("en"));
+    document.getElementById("btnES").addEventListener("click", () => applyLang("es"));
+
+    const saved = localStorage.getItem("mexilime_lang");
+    if(saved === "es" || saved === "en") applyLang(saved);
+    else applyLang("en");
+
+    // Mobile menu
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
+    mobileMenu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.remove("open")));
+
+    // Form mailto submit (keeps it simple)
+    document.getElementById("leadForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const company = document.getElementById("company").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const subject = currentLang === "es"
+        ? "MexiLime - Solicitud de suministro"
+        : "MexiLime - Supply inquiry";
+
+      const body = [
+        `Name / Nombre: ${name}`,
+        `Company / Empresa: ${company}`,
+        `Email: ${email}`,
+        `Phone / Teléfono: ${phone}`,
+        "",
+        "Message / Mensaje:",
+        message || "(none)"
+      ].join("\n");
+
+      const mailto = `mailto:sales@mexilime.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = mailto;
+    });
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!--
+    ====== FILES YOU MUST ADD IN /assets ======
+    1) MexiLime Logo Horizontal.png
+    2) MexiLime Logo Simplificado.png
+    3) hero-banner.jpg        (hero background)
+    4) about-banner.jpg       (about background)
+    5) product-banner.jpg     (product left image)
+    6) packing-banner.jpg     (packing right image)
+    7) contact-banner.jpg     (contact background)
+
+    If you don't have them yet, upload any placeholders with those exact names to avoid blank backgrounds.
+  -->
+</body>
+</html>
