@@ -405,44 +405,45 @@ f<!doctype html>
       background:#fff;
       border:1px solid var(--border);
       border-radius: var(--radius);
-      padding:18px;               /* 🔽 menos aire */
+      padding:14px 22px 18px;     /* 🔽 menos espacio arriba */
       box-shadow: 0 12px 30px rgba(0,0,0,.08);
       display:flex;
       flex-direction:column;
-      justify-content:center;
-      gap:8px;                    /* 🔽 spacing interno más compacto */
+      justify-content:flex-start; /* 🔥 ya no centra vertical */
+      gap:8px;
     }
     
+    /* Título más cerca del borde superior */
     .product-h3{
-      margin:0 0 4px;             /* 🔽 menos espacio abajo */
+      margin:0 0 6px;             /* 🔥 solo una línea abajo */
       font-size:22px;
       letter-spacing:-.2px;
     }
     
+    /* Descripción inmediatamente debajo */
     .product-boxsub{
-      margin:0 0 6px;             /* 🔽 más compacto */
+      margin:0 0 10px;            /* 🔽 compacto pero legible */
       color: var(--muted);
       font-weight:650;
     }
     
+    /* Lista alineada con texto (no pegada al borde) */
     .product-info .list{
       margin:0;
-      padding:0;
-      gap:8px;                    /* 🔽 bullets más juntos */
+      padding-left:0;             /* 🔥 quita indent default */
+      gap:8px;
     }
     
+    /* Ajuste fino de cada bullet */
+    .product-info .list li{
+      padding-left:0;
+    }
+    
+    /* Botón un poco separado pero sin exceso */
     .product-cta{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:6px;
+      margin-top:10px;
     }
-    
-    .product-note{
-      margin:12px 0 0;
-      color:var(--muted);
-      font-weight:650;
-    }
+
 
     /* ================= CONTACT ================= */
     .contact-banner{
@@ -1022,6 +1023,7 @@ f<!doctype html>
 
 </body>
 </html>
+
 
 
 
