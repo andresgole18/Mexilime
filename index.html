@@ -347,72 +347,91 @@
     }
     .card p{margin:0; color:var(--muted); font-weight:650}
 
-    /* ================= PRODUCT ================= */
-    .product-wrap{
+    /* ===== PRODUCT (PRO layout) ===== */
+    .product-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+    
+    .product-title{
+      margin:0;
+      font-size:34px;
+      letter-spacing:-.5px;
+    }
+    
+    .product-subtitle{
+      margin:8px 0 0;
+      color:var(--muted);
+      font-weight:650;
+      max-width:75ch;
+    }
+    
+    .product-pro{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
+      grid-template-columns: 1.05fr .95fr;
       gap:16px;
       margin-top:18px;
       align-items:stretch;
     }
-    @media (max-width: 980px){ .product-wrap{grid-template-columns:1fr} }
-
-    .product-box{
+    
+    @media (max-width: 980px){
+      .product-pro{ grid-template-columns:1fr; }
+    }
+    
+    .product-img{
+      border-radius: var(--radius);
+      border:1px solid var(--border);
+      box-shadow: 0 12px 30px rgba(0,0,0,.08);
+      overflow:hidden;
+      min-height: 360px;
+    
+      /* ✅ imagen SIN overlay */
+      background-image: url('assets/product-banner.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    
+    .product-info{
       background:#fff;
       border:1px solid var(--border);
-      border-radius:var(--radius);
-      overflow:hidden;
+      border-radius: var(--radius);
+      padding: 22px;
       box-shadow: 0 12px 30px rgba(0,0,0,.08);
-    }
-    .product-hero{
-      position:relative;
-      min-height:220px;
-      background-size:cover;
-      background-position:center;
-      overflow:hidden;              /* ✅ evita que algo se “asome” */
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:12px;
     }
     
-    .product-hero::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      z-index:1;                    /* ✅ overlay arriba de todo lo del fondo */
-      background: linear-gradient(90deg, rgba(8,36,19,.78), rgba(8,36,19,.20));
-    }
-    
-    /* ✅ cualquier contenido adentro debe ir por encima del overlay */
-    .product-hero .ph-content{
-      position:relative;
-      z-index:2;
-      padding:18px;
-      color:#fff;
-      max-width:62ch;
-    }
-
-
-    .product-body{padding:18px; display:grid; gap:12px}
-
-    .list{
+    .product-h3{
       margin:0;
-      padding:0;
-      list-style:none;
-      display:grid;
-      gap:10px;
+      font-size:22px;
+      letter-spacing:-.2px;
     }
-    .list li{
+    
+    .product-boxsub{
+      margin:0;
+      color: var(--muted);
+      font-weight:650;
+    }
+    
+    .product-cta{
       display:flex;
       gap:10px;
-      align-items:flex-start;
+      flex-wrap:wrap;
+      margin-top: 8px;
+    }
+    
+    .product-note{
+      margin:14px 0 0;
       color:var(--muted);
       font-weight:650;
     }
-    .dot{
-      width:10px; height:10px; margin-top:7px;
-      border-radius:999px;
-      background:var(--lime-500);
-      box-shadow: 0 0 0 4px rgba(166,206,57,.18);
-      flex:0 0 auto;
-    }
+
 
     /* ================= CONTACT ================= */
     .contact-banner{
@@ -652,48 +671,32 @@
         <a class="btn btn-primary" href="#contact" data-i18n="product.cta">Request Supply Info</a>
       </div>
 
-      <div class="product-wrap">
-        <div class="product-box">
-          <div class="product-hero" style="background-image:url('assets/product-banner.jpg');">
-            <div class="ph-content">
-              <strong data-i18n="product.boxTitle">Seedless Persian Lime</strong>
-              <span data-i18n="product.boxSub">Commercial supply for importers, distributors and wholesalers in the U.S.</span>
-            </div>
-          </div>
-
-          <div class="product-body">
-            <ul class="list">
-              <li><span class="dot"></span><span data-i18n="product.l1">Origin: Mexico</span></li>
-              <li><span class="dot"></span><span data-i18n="product.l2">Type: Persian lime (seedless)</span></li>
-              <li><span class="dot"></span><span data-i18n="product.l3">Supply: consistent weekly availability (seasonality may apply)</span></li>
-              <li><span class="dot"></span><span data-i18n="product.l4">Quality: commercial export standards</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="product-box">
-          <div class="product-hero" style="background-image:url('assets/packing-banner.jpg');">
-            <div class="ph-content">
-              <strong data-i18n="product.packTitle">Packing & Logistics</strong>
-              <span data-i18n="product.packSub">Built to reduce risk and speed up decision-making for buyers.</span>
-            </div>
-          </div>
-
-          <div class="product-body">
-            <ul class="list">
-              <li><span class="dot"></span><span data-i18n="product.p1">Cartons & pallets (customizable)</span></li>
-              <li><span class="dot"></span><span data-i18n="product.p2">Labeling options for distribution</span></li>
-              <li><span class="dot"></span><span data-i18n="product.p3">Cold chain coordination</span></li>
-              <li><span class="dot"></span><span data-i18n="product.p4">Incoterms: FOB / CIF (case-by-case)</span></li>
-            </ul>
+      <div class="product-pro">
+        <!-- Left: Image (no effects) -->
+        <div class="product-img" aria-label="Seedless Persian lime image"></div>
+      
+        <!-- Right: Text -->
+        <div class="product-info">
+          <h3 data-i18n="product.boxTitle">Seedless Persian Lime</h3>
+          <p class="sub" data-i18n="product.boxSub">
+            Commercial supply for importers, distributors and wholesalers in the U.S.
+          </p>
+      
+          <ul class="list">
+            <li><span class="dot"></span><span data-i18n="product.l1">Origin: Mexico</span></li>
+            <li><span class="dot"></span><span data-i18n="product.l2">Type: Persian lime (seedless)</span></li>
+            <li><span class="dot"></span><span data-i18n="product.l3">Supply: consistent weekly availability (seasonality may apply)</span></li>
+            <li><span class="dot"></span><span data-i18n="product.l4">Quality: commercial export standards</span></li>
+          </ul>
+      
+          <div class="product-cta">
+            <a class="btn btn-primary" href="#contact" data-i18n="product.cta">Request Supply Info</a>
+            <a class="btn btn-ghost" href="https://wa.me/16175150595" target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
           </div>
         </div>
       </div>
-
-      <p style="margin:14px 0 0; color:var(--muted); font-weight:650;" data-i18n="product.note">
-        Add your real images in /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.
-      </p>
-    </div>
   </section>
 
   <!-- EXPORT -->
@@ -841,7 +844,6 @@
         "product.p2":"Labeling options for distribution",
         "product.p3":"Cold chain coordination",
         "product.p4":"Incoterms: FOB / CIF (case-by-case)",
-        "product.note":"Add your real images in /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.",
 
         "export.title":"Export & Logistics",
         "export.subtitle":"Structured for U.S. buyers: clear documentation, coordinated logistics, and consistent communication.",
@@ -908,7 +910,6 @@
         "product.p2":"Etiquetado para distribución",
         "product.p3":"Coordinación de cadena fría",
         "product.p4":"Incoterms: FOB / CIF (según caso)",
-        "product.note":"Agrega tus imágenes en /assets: hero-banner.jpg, about-banner.jpg, product-banner.jpg, packing-banner.jpg.",
 
         "export.title":"Exportación y Logística",
         "export.subtitle":"Estructurados para buyers en USA: documentación clara, logística coordinada y comunicación constante.",
@@ -1011,6 +1012,7 @@
 
 </body>
 </html>
+
 
 
 
