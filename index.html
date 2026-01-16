@@ -28,6 +28,11 @@
       --nav-h: 240px;          /* NORMAL height of menu bar */
       --nav-h-scroll: 58px;   /* SCROLL height of menu bar */
       --brand-pad: 2px;       /* vertical padding around logo */
+
+      /* ✅ NEW: logo heights */
+      --logo-h: 200px;        /* logo normal (casi llena la barra) */
+      --logo-h-scroll: 42px;  /* logo al hacer scroll */
+      
     }
 
     *{box-sizing:border-box}
@@ -113,25 +118,26 @@
       align-items:center;
       justify-content:space-between;
       gap:14px;
-
-      height: var(--nav-h);     /* ✅ stable sizing */
-      min-height: 0;            /* ✅ prevent % height weirdness */
+    
+      height: var(--nav-h);
       transition: height .2s ease;
     }
-
+    
     .brand{
       display:flex;
       align-items:center;
-      height:100%;
+      height: 100%;
       min-width:auto;
-      padding: var(--brand-pad) 0; /* ✅ elegant vertical breathing room */
+      padding: var(--brand-pad) 0;
     }
+    
+    /* ✅ logo controlado: siempre grande en barra grande */
     .brand img{
-      height: calc(100% - (var(--brand-pad) * 2)); /* ✅ logo scales with bar */
+      height: var(--logo-h);
       width: auto;
-      max-height: 100%;   /* ✅ safety */
       max-width: none;
-      transition: height .2s ease;
+      max-height: calc(100% - (var(--brand-pad) * 2)); /* nunca se sale */
+      display:block;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,.18));
     }
 
@@ -204,13 +210,14 @@
     }
     .lang-toggle button.active{background: rgba(255,255,255,.16)}
 
-    /* Estado scrolled (compacto) */
-    header.is-scrolled{
-      background: rgba(8,36,19,.92);
-      box-shadow: 0 10px 24px rgba(0,0,0,.18);
-    }
+    /* ✅ Estado scrolled (compacto) */
     header.is-scrolled .nav{
-      height: var(--nav-h-scroll); /* ✅ compact height on scroll */
+      height: var(--nav-h-scroll);
+    }
+    
+    header.is-scrolled .brand img{
+      height: var(--logo-h-scroll);
+      max-height: calc(100% - (var(--brand-pad) * 2));
     }
 
     /* Mobile menu */
@@ -1003,6 +1010,7 @@
 
 </body>
 </html>
+
 
 
 
