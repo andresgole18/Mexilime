@@ -444,58 +444,50 @@ f<!doctype html>
       margin-top:10px;
     }
 
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact-banner" aria-label="Contact us">
-      <div class="bg" style="background-image:url('assets/contact-banner.jpg');"></div>
-      <div class="overlay"></div>
+    /* ===== CONTACT (clean) ===== */
+    .simple-form-clean{
+      max-width: 980px;
+      margin-top: 14px;
+    }
     
-      <div class="content">
-        <div class="container">
-          <h2 data-i18n="contact.title">Contact Us</h2>
-          <p data-i18n="contact.subtitle">
-            Send your request and we’ll reply with availability, packing options, and next steps.
-          </p>
+    .simple-form-clean label{
+      color: rgba(255,255,255,.92);
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
     
-          <form id="leadForm" class="simple-form simple-form-clean">
-            <div class="form-grid">
+    .simple-form-clean input,
+    .simple-form-clean textarea{
+      background: rgba(255,255,255,.96);
+      border: 1px solid rgba(255,255,255,.22);
+      box-shadow: 0 10px 22px rgba(0,0,0,.10);
+    }
     
-              <!-- Row 1: Name + Email -->
-              <div class="form-row">
-                <div>
-                  <label for="name" data-i18n="contact.name">Name</label>
-                  <input id="name" name="name" required />
-                </div>
+    .simple-form-clean input{
+      border-radius: 12px;     /* 🔥 más limpio que “pill” */
+      padding: 14px 16px;
+    }
     
-                <div>
-                  <label for="email" data-i18n="contact.email">Email</label>
-                  <input id="email" name="email" type="email" required />
-                </div>
-              </div>
+    .simple-form-clean textarea{
+      border-radius: 14px;
+      min-height: 150px;
+      padding: 14px 16px;
+    }
     
-              <!-- Row 2: Company full width -->
-              <div>
-                <label for="company" data-i18n="contact.company">Company</label>
-                <input id="company" name="company" required />
-              </div>
+    /* Row spacing */
+    .simple-form-clean .form-grid{
+      gap: 14px;
+    }
     
-              <!-- Row 3: Message -->
-              <div>
-                <label for="message" data-i18n="contact.message">Message</label>
-                <textarea id="message" name="message"></textarea>
-              </div>
+    .simple-form-clean .form-row{
+      gap: 14px;
+    }
     
-              <!-- Submit -->
-              <div class="send-row">
-                <button class="btn-send" type="submit" data-i18n="contact.send">Send</button>
-              </div>
-    
-            </div>
-          </form>
-        </div>
-      </div>
-    </section>
-
+    /* Button cleaner */
+    .simple-form-clean .btn-send{
+      border-radius: 12px;
+      padding: 14px 30px;
+    }
 
     /* ================= FOOTER ================= */
     footer{
@@ -726,50 +718,47 @@ f<!doctype html>
   <section id="contact" class="contact-banner" aria-label="Contact us">
     <div class="bg" style="background-image:url('assets/contact-banner.jpg');"></div>
     <div class="overlay"></div>
-
+  
     <div class="content">
       <div class="container">
         <h2 data-i18n="contact.title">Contact Us</h2>
         <p data-i18n="contact.subtitle">
           Send your request and we’ll reply with availability, packing options, and next steps.
         </p>
-
-        <form id="leadForm" class="simple-form">
+  
+        <form id="leadForm" class="simple-form simple-form-clean">
           <div class="form-grid">
-            <div>
-              <label for="name" data-i18n="contact.name">Name</label>
-              <input id="name" name="name" required />
-            </div>
-
-            <div>
-              <label for="company" data-i18n="contact.company">Company</label>
-              <input id="company" name="company" required />
-            </div>
-
+  
+            <!-- Row 1: Name + Email -->
             <div class="form-row">
+              <div>
+                <label for="name" data-i18n="contact.name">Name</label>
+                <input id="name" name="name" required />
+              </div>
+  
               <div>
                 <label for="email" data-i18n="contact.email">Email</label>
                 <input id="email" name="email" type="email" required />
               </div>
-              <div>
-                <label for="phone" data-i18n="contact.phone">Phone number</label>
-                <input id="phone" name="phone" />
-              </div>
             </div>
-
+  
+            <!-- Row 2: Company full width -->
+            <div>
+              <label for="company" data-i18n="contact.company">Company</label>
+              <input id="company" name="company" required />
+            </div>
+  
+            <!-- Row 3: Message -->
             <div>
               <label for="message" data-i18n="contact.message">Message</label>
               <textarea id="message" name="message"></textarea>
             </div>
-
+  
+            <!-- Submit -->
             <div class="send-row">
               <button class="btn-send" type="submit" data-i18n="contact.send">Send</button>
             </div>
-
-            <p style="margin:0; font-size:12.5px; color:rgba(255,255,255,.85); font-weight:650;">
-              <span data-i18n="contact.tip">Tip:</span>
-              <span data-i18n="contact.tipText">Include destination (city/state), weekly pallets, preferred size range, and FOB/CIF preference.</span>
-            </p>
+  
           </div>
         </form>
       </div>
@@ -851,11 +840,8 @@ f<!doctype html>
         "contact.name":"Name",
         "contact.company":"Company",
         "contact.email":"Email",
-        "contact.phone":"Phone number",
         "contact.message":"Message",
         "contact.send":"Send",
-        "contact.tip":"Tip:",
-        "contact.tipText":"Include destination (city/state), weekly pallets, preferred size range, and FOB/CIF preference.",
 
         "footer.tag":"Seedless Persian Lime Export • Mexico → USA",
         "footer.rights":"All rights reserved."
@@ -917,11 +903,8 @@ f<!doctype html>
         "contact.name":"Nombre",
         "contact.company":"Empresa",
         "contact.email":"Correo",
-        "contact.phone":"Teléfono",
         "contact.message":"Mensaje",
         "contact.send":"Enviar",
-        "contact.tip":"Tip:",
-        "contact.tipText":"Incluye destino (ciudad/estado), tarimas por semana, calibres y preferencia FOB/CIF.",
 
         "footer.tag":"Exportación de Limón Persa Sin Semilla • México → USA",
         "footer.rights":"Todos los derechos reservados."
@@ -966,7 +949,6 @@ f<!doctype html>
       const name = document.getElementById("name").value.trim();
       const company = document.getElementById("company").value.trim();
       const email = document.getElementById("email").value.trim();
-      const phone = document.getElementById("phone").value.trim();
       const message = document.getElementById("message").value.trim();
 
       const subject = currentLang === "es" ? "MexiLime - Solicitud de suministro" : "MexiLime - Supply inquiry";
@@ -975,7 +957,6 @@ f<!doctype html>
         `Name / Nombre: ${name}`,
         `Company / Empresa: ${company}`,
         `Email: ${email}`,
-        `Phone / Teléfono: ${phone}`,
         "",
         "Message / Mensaje:",
         message || "(none)"
@@ -1002,6 +983,7 @@ f<!doctype html>
 
 </body>
 </html>
+
 
 
 
