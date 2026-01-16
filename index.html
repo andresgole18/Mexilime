@@ -118,9 +118,9 @@
       min-width:auto;
     }
     .brand img{
-      height: 120px;                  /* 🔥 EXAGERADO ARRIBA */
+      height: 100%;                  /* 🔥 EXAGERADO ARRIBA */
       width: auto;                   /* ✅ siempre auto para logo */
-      max-height: 120px;
+      max-height: none;
       max-width: none;
       transition: height .2s ease, max-height .2s ease;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,.18));
@@ -201,11 +201,11 @@
       box-shadow: 0 10px 24px rgba(0,0,0,.18);
     }
     header.is-scrolled .nav{
-      min-height: 120px;              /* compacto */
+      min-height: 34px;              /* compacto */
     }
     header.is-scrolled .brand img{
-      height: 34px;                  /* logo chico */
-      max-height: 34px;
+      height: 100%;                  /* logo chico */
+      max-height: none;
     }
 
     /* Mobile menu */
@@ -998,4 +998,5 @@
 
 </body>
 </html>
+
 
