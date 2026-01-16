@@ -23,6 +23,11 @@
       --border:#e5efe9;
       --radius: 20px;
       --max: 1160px;
+
+      /* ✅ Header sizing controls */
+      --nav-h: 68px;          /* NORMAL height of menu bar */
+      --nav-h-scroll: 52px;   /* SCROLL height of menu bar */
+      --brand-pad: 6px;       /* vertical padding around logo */
     }
 
     *{box-sizing:border-box}
@@ -108,8 +113,10 @@
       align-items:center;
       justify-content:space-between;
       gap:14px;
-      min-height: 68px;              
-      transition: min-height .2s ease;
+
+      height: var(--nav-h);     /* ✅ stable sizing */
+      min-height: 0;            /* ✅ prevent % height weirdness */
+      transition: height .2s ease;
     }
 
     .brand{
@@ -117,14 +124,14 @@
       align-items:center;
       height:100%;
       min-width:auto;
-      padding: 6px 0;   /* ✅ aire vertical elegante */
+      padding: var(--brand-pad) 0; /* ✅ elegant vertical breathing room */
     }
     .brand img{
-      height: 100%;                  
-      width: auto;                  
-      max-height: none;
+      height: calc(100% - (var(--brand-pad) * 2)); /* ✅ logo scales with bar */
+      width: auto;
+      max-height: 100%;   /* ✅ safety */
       max-width: none;
-      transition: height .2s ease, max-height .2s ease;
+      transition: height .2s ease;
       filter: drop-shadow(0 6px 14px rgba(0,0,0,.18));
     }
 
@@ -203,15 +210,7 @@
       box-shadow: 0 10px 24px rgba(0,0,0,.18);
     }
     header.is-scrolled .nav{
-      min-height: 52px;     /* 🔽 más compacta */
-    }
-    
-    header.is-scrolled .brand{
-      height: 100%;
-    }
-    
-    header.is-scrolled .brand img{
-      height: 100%;
+      height: var(--nav-h-scroll); /* ✅ compact height on scroll */
     }
 
     /* Mobile menu */
@@ -1004,6 +1003,3 @@
 
 </body>
 </html>
-
-
-
